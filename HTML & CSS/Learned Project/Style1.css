@@ -1,0 +1,89 @@
+.subscribe-button{
+  font-family: "Montserrat",sans-serif;
+  font-weight: 500;
+  background-color: rgb(179, 1, 1);
+  color: rgb(255, 255, 255);
+  border: none;
+  height: 36px;
+  width: 105px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 8px;
+  transition: all 0.25s ease-in-out;
+}
+
+.subscribe-button:hover {
+  opacity: 0.8;
+  
+
+}
+
+.join-button{
+  font-family: "Montserrat",sans-serif;
+  font-weight: 500;
+  color: rgb(0, 153, 255);
+
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(0, 153, 255);
+  height: 36px;
+  width: 70px;
+  border-radius: 3px;
+  margin: 8px;
+
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.join-button:hover{
+  opacity: 0.8;
+  color: white;
+  background-color: rgb(0, 153, 255);
+
+}
+
+.tweet-button{
+  font-family: "Montserrat",sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+
+  border-style: solid;
+  background-color: rgb(0, 153, 255);
+  border-color: rgb(0, 153, 255);
+  height: 36px;
+  width: 70px;
+  border-radius: 20px;
+  margin: 8px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0,0.2);
+
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.tweet-button:hover{
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.checkout-button{
+  font-family: "Montserrat",sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 0px;
+  color: rgb(0, 0, 0);
+
+  border-style: solid;
+  background-color: rgb(255, 216, 20);
+  border-color: rgb(255, 216, 20);
+  height: 25px;
+  width: 200px;
+  border-radius: 20px;
+  margin: 0px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.checkout-button:hover{
+  opacity: 0.9;
+  transform: scale(1.05);
+}
