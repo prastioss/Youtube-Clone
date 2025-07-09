@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Excercise 9</title>
+  </head>
+  <body>
+    <button class="js-button1" onclick="updateValue('heads')">heads</button>
+    <button class="js-button2" onclick="updateValue('tails')">tails</button>
+    <p class="paragraph"></p>
+    <input
+      type="button nich"
+      name=""
+      class="js-input"
+      placeholder="Name"
+      onkeydown="enterButton(event)"
+      onkeyup=""
+    />
+    <button onclick="updateValue2()">Submit</button>
+    <p class="paragraph2"></p>
+
+    <script>
+      function updateValue(update) {
+        document.querySelector(
+          ".paragraph"
+        ).innerHTML = `You choose: ${update}`;
+      }
+
+      function updateValue2() {
+        const code = document.querySelector(".js-input").value;
+        document.querySelector(
+          ".paragraph2"
+        ).innerHTML = `Your name is: ${code}`;
+      }
+
+      function enterButton(event) {
+        event.key === "Enter" ? updateValue2() : "";
+      }
+    </script>
+  </body>
+</html>

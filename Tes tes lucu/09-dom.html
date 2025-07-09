@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Dom</title>
+  </head>
+  <body>
+    <button
+      onclick="
+      showResult();
+      "
+    >
+      Update Score
+    </button>
+
+    <p class="space1"></p>
+    <p class="space2"></p>
+    <script>
+      const score = { Win: 3, Lose: 8, Tie: 9 };
+      scoreText = `Wins: ${score.Win}, Losses: ${score.Lose}, Ties: ${score.Tie}`;
+      document.querySelector('.space2').innerText = scoreText;
+
+      /*
+      console.log(document.querySelector('button').innerHTML);
+
+      document.querySelector('button').innerHTML = 'cacaku';
+
+      const buttonElement = document.querySelector('.js-button')
+      console.log(buttonElement)
+
+
+      console.log(document.title);
+      document.title = 'Pelerrr';
+
+      console.log(document.body);
+
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML)
+
+      */
+
+      function showResult() {
+        document.querySelector('.spaces').innerText = `Score: ${c}`;
+        console.log(document.querySelector('.spaces').innerText);
+      }
+    </script>
+  </body>
+</html>

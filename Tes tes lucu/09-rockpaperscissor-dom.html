@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>TRIAL</title>
+  </head>
+  <body>
+    <div><p>Rock Paper Scissors</p></div>
+    <div>
+      <button
+        class="rock-button"
+        onclick="
+        playGame('Rock')"
+      >
+        Rock
+      </button>
+      <button
+        onclick="
+        playGame('Paper')"
+      >
+        Paper
+      </button>
+      <button
+        onclick="
+        playGame('Scissors')"
+      >
+        Scissors
+      </button>
+    </div>
+    <div>
+      <p class="js-result"></p>
+      <p class="js-compare"></p>
+      <p class="js-score"></p>
+    </div>
+    <div>
+      <button onclick="resetScore()">Reset Score</button>
+    </div>
+
+    <script src="09-rockpaperscissor.js"></script>
+  </body>
+</html>

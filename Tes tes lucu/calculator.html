@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Calculator keren</title>
+    <style>
+      button {
+        padding: 5px;
+        font-family: 'Arial';
+        width: 40px;
+        height: 40px;
+      }
+
+      div {
+        margin: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="updateCalculation('1')">1</button>
+      <button onclick="updateCalculation('2')">2</button>
+      <button onclick="updateCalculation('3')">3</button>
+      <button onclick="updateCalculation(' + ')">+</button>
+    </div>
+    <div>
+      <button onclick="updateCalculation('4')">4</button>
+      <button onclick="updateCalculation('5')">5</button>
+      <button onclick="updateCalculation('6')">6</button>
+      <button onclick="updateCalculation(' - ')">-</button>
+    </div>
+    <div>
+      <button onclick="updateCalculation('7')">7</button>
+      <button onclick="updateCalculation('8')">8</button>
+      <button onclick="updateCalculation('9')">9</button>
+      <button onclick="updateCalculation(' * ')">x</button>
+    </div>
+
+    <div>
+      <button onclick="(updateCalculation('0'))">0</button>
+      <button onclick="(updateCalculation(`.`))">.</button>
+      <button
+        onclick="
+        const execute = eval(number);
+        const view = `${number} = ${execute}`
+        saveHistory(number, execute);
+        displayCalculation(`${number} = ${execute}`)
+        console.log(`${number} = ${execute}`);
+        showHistory();
+        number = execute;
+        
+      "
+      >
+        =
+      </button>
+      <button onclick="(updateCalculation(' / '))">/</button>
+    </div>
+
+    <button
+      onclick="
+      resetHistory()
+      "
+      style="width: 50px"
+    >
+      Reset
+    </button>
+
+    <button
+      onclick="slicedNum = number.slice(0,-1);number = slicedNum; console.log(number)"
+      style="width: 50px"
+    >
+      Del
+    </button>
+
+    <p class="js-calText"></p>
+    <script>
+      let number = '';
+
+      function updateCalculation(calNum) {
+        number += calNum;
+        displayCalculation(number);
+      }
+
+      function saveHistory(expression, result) {
+        let hisLog = JSON.parse(localStorage.getItem('hisLog')) || [];
+        hisLog.push(`${expression} = ${result}`);
+        localStorage.setItem('hisLog', JSON.stringify(hisLog));
+      }
+
+      function showHistory() {
+        const hisLog = JSON.parse(localStorage.getItem('hisLog')) || [];
+        console.log('History:');
+        hisLog.forEach((item) => console.log(item));
+      }
+
+      function resetHistory() {
+        number = '';
+
+        JSON.parse(localStorage.getItem('hisLog'));
+        let hisLog = '';
+        localStorage.setItem('hisLog', JSON.stringify(hisLog));
+        console.log('Reset dulu bro');
+      }
+
+      function displayCalculation(number) {
+        document.querySelector('.js-calText').innerText = number;
+      }
+    </script>
+  </body>
+</html>

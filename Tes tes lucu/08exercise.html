@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>exercise 8</title>
+  </head>
+  <body>
+    <script>
+      const product1 = {
+        name: 'Pepek jablay cikarang',
+        price: 1000,
+      };
+
+      const product2 = {
+        name: 'Pepek jablay bekasi',
+        price: 100,
+      };
+
+      const product3 = {
+        name: 'pelerrrrrr',
+        price: 100,
+      };
+
+      const product4 = {
+        name: 'pelerrrrrr',
+        price: 1000,
+      };
+
+      console.log(product1);
+      console.log(product1.price);
+      console.log(product2.price);
+
+      function comparePrice(x, y) {
+        return x.price < y.price ? x : y;
+      }
+
+      const cheaperProduct = comparePrice(product1, product2);
+
+      console.log(cheaperProduct.name);
+
+      function isSameProduct(x, y) {
+        x.price === y.price && x.name === y.name
+          ? console.log('Sama bos')
+          : console.log('Beda jing');
+      }
+
+      isSameProduct(product3, product4);
+
+      const b = 'Good Morning';
+
+      let c = b.toLowerCase();
+      console.log(c);
+
+      const result = 'Hello '.repeat(5);
+      console.log(result);
+    </script>
+  </body>
+</html>

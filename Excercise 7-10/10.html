@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 10 - Manual Toggle with Console</title>
+    <style>
+      .button {
+        padding: 15px;
+        cursor: pointer;
+        border: none;
+        border-radius: 50px;
+        background-color: #f0f0f0;
+        color: black;
+      }
+
+      .active {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button js-button" onclick="manualToggle(this)">
+      Gaming
+    </button>
+    <button class="button js-button" onclick="manualToggle(this)">
+      Reading
+    </button>
+    <button class="button js-button" onclick="manualToggle(this)">Music</button>
+
+    <script>
+      function manualToggle(button) {
+        console.log("You clicked:", button); // ✅ Logs the button element itself
+        console.log("Button text:", button.innerText); // ✅ Logs its text (like 'Gaming')
+
+        let className = button.className;
+        console.log("Before toggle, className:", className); // ✅ Logs current classes
+
+        if (className.indexOf("active") === -1) {
+          button.className += " active";
+          console.log("Added active class.");
+        } else {
+          button.className = className.replace(" active", "");
+          console.log("Removed active class.");
+        }
+
+        console.log("After toggle, className:", button.className); // ✅ Logs classes after change
+        console.log("---"); // Separator for easier reading
+      }
+
+      let test1 = 2;
+      test();
+
+      function test() {
+        const be = test1 > 25 ? test1++ : (test1 -= 3);
+      }
+    </script>
+  </body>
+</html>
